@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>秋季関東歯科学生洋弓大会 スコア</title>
+<style>
+:root{--bg:#f2f4f7;--cd:#fff;--fg:#1c2230;--mu:#6b7385;--ln:#d9dee6;--ac:#1f6feb;--ink:#222}
+@media(prefers-color-scheme:dark){:root{--bg:#12151b;--cd:#1c212a;--fg:#e8ebf0;--mu:#98a1b3;--ln:#2e3542;--ac:#5b9dff;--ink:#dfe3ea}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.4 system-ui,-apple-system,"Hiragino Sans","Meiryo",sans-serif}
+button,select,input,textarea{font:inherit;color:var(--fg)}
+button,select{background:var(--cd);border:1px solid var(--ln);border-radius:9px;padding:9px 10px;cursor:pointer}
+button.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;font-size:14px}
+.stk{position:sticky;top:0;z-index:8;background:var(--bg);padding:0 8px 6px}
+.seg{display:flex;gap:4px;margin-top:4px}.seg button{flex:1;padding:9px 2px;font-size:13px}
+main{max-width:720px;margin:0 auto;padding:4px 8px 24px}
+body.hp main{padding-bottom:200px}
+.card{background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:10px;margin-bottom:10px}
+.mu{color:var(--mu);font-size:12px}
+.sel{display:flex;gap:6px;margin-bottom:8px}.sel .who{flex:1;text-align:left;line-height:1.25;min-width:0}.sel .who small{display:block;color:var(--mu)}
+.sh{display:flex;justify-content:space-between;font-size:12px;border:2px solid var(--ink);border-bottom:0;padding:4px 6px}
+.st{width:100%;table-layout:fixed;border-collapse:collapse;border:2px solid var(--ink)}
+.st th,.st td{border:1px solid var(--ink);text-align:center;padding:0;height:40px;font-size:14px}
+.st th{height:26px;font-size:11px;font-weight:400}
+.st td.en{font-weight:700;font-size:16px}
+.st td.ac{font-size:22px;font-weight:700;scroll-margin:130px 0 210px}
+.st td.cur{outline:3px solid var(--ac);outline-offset:-3px}
+.st tfoot td{height:42px;font-weight:700;font-size:18px}
+.s-X,.s-10,.s-9{background:#f7d23e;color:#222}.s-8,.s-7{background:#e5483d;color:#fff}
+.s-6,.s-5{background:#3b82f6;color:#fff}.s-4,.s-3{background:#222;color:#fff}
+.s-2,.s-1{background:#fff;color:#222}.s-M{background:#8a93a5;color:#fff}
+#pad{display:none;position:fixed;left:0;right:0;bottom:0;z-index:9;background:var(--cd);border-top:1px solid var(--ln);padding:8px 8px calc(8px + env(safe-area-inset-bottom))}
+body.hp #pad{display:block}
+.keys{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;max-width:720px;margin:auto}
+.keys button{height:46px;font-size:19px;font-weight:700;padding:0;border:1px solid transparent}
+.keys .s-2,.keys .s-1{border-color:#999}
+.keys .w{grid-column:span 3;font-size:15px;background:var(--cd);color:var(--fg);border-color:var(--ln)}
+#pick{display:none;position:fixed;inset:0;z-index:20;background:var(--bg);overflow:auto;padding:8px}
+#pick.on{display:block}
+.mh{display:flex;justify-content:space-between;align-items:center;padding:6px 2px;position:sticky;top:0;background:var(--bg)}
+.mg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px}
+.tc{display:flex;gap:6px;align-items:stretch;background:var(--cd);border:1px solid var(--ln);border-radius:10px;padding:6px}
+.tc>b{width:24px;display:flex;align-items:center;justify-content:center}
+.tc button{flex:1;min-width:0;text-align:left;padding:8px 6px;font-size:13px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.tc i{font-style:normal;color:var(--mu);margin-right:4px}
+.tc .sel2{outline:3px solid var(--ac)}.tc .done{background:#d9f2dd;color:#14411d}.tc .part{background:#fff3cd;color:#5a4500}
+.bc{display:flex;gap:10px;align-items:center}
+.rk{width:30px;font-size:20px;font-weight:700;text-align:center}
+.bi{flex:1;min-width:0}.bi b{display:block}
+.bt{font-size:26px;font-weight:700;text-align:right}.bt small{font-size:11px;color:var(--mu);font-weight:400}
+.rr{display:grid;grid-template-columns:26px 1fr 54px 62px;gap:4px;margin-top:6px}
+.rr .ab{grid-row:1/3;align-self:center;font-weight:700}
+.rr input,.rr select,textarea,.in{width:100%;min-width:0;padding:8px;border:1px solid var(--ln);border-radius:8px;background:var(--bg);font-size:16px}
+.f1{grid-column:2/5}.f2{grid-column:2}.f3{grid-column:3}.f4{grid-column:4}
+.tn{font-weight:700}
+textarea{height:110px;font-family:monospace;font-size:13px}
+ol{padding-left:20px;margin:6px 0}li{margin:3px 0}
+.row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="top"><b>令和8年度 秋季関東歯科学生洋弓大会</b><span id="badge" class="mu"></span></div>
+<div class="stk">
+  <div class="seg" id="tabs">
+    <button data-tab="input">入力</button><button data-tab="board">集計</button><button data-tab="roster">名簿</button><button data-tab="sync">同期</button>
+  </div>
+  <div class="seg" id="comp"></div>
+</div>
+<main id="v"></main>
+<div id="pad"></div>
+<div id="pick"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+const EV={rookie:{label:"新人戦",T:11,R:["30m"],max:360},indiv:{label:"個人戦",T:15,R:["50m","30m"],max:720}};
+const COMP=[["rookie",0,"新人戦 30m"],["indiv",0,"個人戦 50m"],["indiv",1,"個人戦 30m"]];
+const KEYS=["X","10","9","8","7","6","5","4","3","2","1","M"];
+const FLD=["name","univ","grade","gender"];
+const SK="arc-v4",CK="arc-cfg",RK="arc-room",AK="arc-auto";
+const VIEW=new URLSearchParams(location.search).has("view");
+
+const mk=ev=>({name:"",univ:"",grade:"",gender:"",sc:EV[ev].R.map(()=>Array(36).fill(null))});
+const init=()=>{const s={};for(const e in EV)s[e]=Array.from({length:EV[e].T*2},()=>mk(e));return s;};
+function load(){try{const d=JSON.parse(localStorage.getItem(SK));if(d&&EV&&Object.keys(EV).every(e=>d[e]&&d[e].length===EV[e].T*2))return d;}catch(_){}return null;}
+const save=()=>{try{localStorage.setItem(SK,JSON.stringify(state));}catch(_){}};
+
+let state=load()||init();
+let ui={tab:VIEW?"board":"input",c:0,i:0,k:0,g:"all",pick:false};
+let auto=localStorage.getItem(AK)!=="0";
+
+const cur=()=>({ev:COMP[ui.c][0],r:COMP[ui.c][1]});
+const val=v=>v==="X"?10:(v==null||v==="M")?0:+v;
+const rank=v=>v==="X"?11:v==null?-1:v==="M"?0:+v;
+const sum=a=>a.reduce((s,v)=>s+val(v),0);
+const ten=a=>a.filter(v=>v==="X"||v==="10").length;
+const pos=i=>`的${(i>>1)+1}${i&1?"B":"A"}`;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function stat(q){const a=q.sc.flat();return{t:sum(a),h:a.filter(v=>v!=null&&v!=="M").length,x:a.filter(v=>v==="X").length,t10:a.filter(v=>v==="10").length,n:a.filter(v=>v!=null).length};}
+function firstEmpty(){const{ev,r}=cur();const k=state[ev][ui.i].sc[r].findIndex(v=>v==null);return k<0?35:k;}
+const info=q=>[q.univ,q.grade?q.grade+"年":"",q.gender].filter(Boolean).join(" ");
+
+/* ---------- sync (Firebase Realtime Database) ---------- */
+let db=null,online=false,live=false,room=localStorage.getItem(RK)||"kanto-2026-autumn";
+const ref=p=>db.ref("rooms/"+room+(p?"/"+p:""));
+const rp=(ev,i,f)=>`roster/${ev}/s${i}/${f}`;
+const sp=(ev,i,r,k)=>`scores/${ev}/s${i}/r${r}/a${k}`;
+function push(ch){save();if(live)ref().update(ch).catch(()=>{});queueSheet(ch);}
+function fromRemote(v){
+  const s=init();
+  for(const ev in EV)s[ev].forEach((q,i)=>{
+    const ro=v.roster?.[ev]?.["s"+i]||{};FLD.forEach(f=>q[f]=ro[f]||"");
+    const sc=v.scores?.[ev]?.["s"+i]||{};
+    EV[ev].R.forEach((_,r)=>{const rr=sc["r"+r]||{};for(let k=0;k<36;k++)q.sc[r][k]=rr["a"+k]??null;});
+  });
+  return s;
+}
+function toAll(){
+  const u={};
+  for(const ev in EV)state[ev].forEach((q,i)=>{
+    FLD.forEach(f=>{if(q[f])u[rp(ev,i,f)]=q[f];});
+    q.sc.forEach((a,r)=>a.forEach((v,k)=>{if(v!=null)u[sp(ev,i,r,k)]=v;}));
+  });
+  return u;
+}
+function connect(){
+  let cfg;try{cfg=JSON.parse(localStorage.getItem(CK));}catch(_){}
+  if(!cfg||!cfg.databaseURL)return;
+  if(!window.firebase){badge("同期SDKを読み込めません");return;}
+  try{if(!firebase.apps.length)firebase.initializeApp(cfg);db=firebase.database();}catch(e){badge("同期設定エラー");return;}
+  db.ref(".info/connected").on("value",s=>{online=!!s.val();badge();});
+  let first=true;
+  ref().on("value",snap=>{
+    const v=snap.val();
+    if(!v){const u=toAll();if(first&&Object.keys(u).length)ref().update(u);else if(!first){state=init();save();}}
+    else{state=fromRemote(v);save();}
+    first=false;live=true;
+    if(!document.activeElement||!document.activeElement.matches("input,select,textarea"))render();
+  },()=>badge("同期エラー(ルール/URLを確認)"));
+  badge();
+}
+function badge(m){$("#badge").textContent=m||(db?(online?"🟢 同期中":"🟡 接続中…"):"⚪ この端末のみ");}
+function parseCfg(t){
+  try{const o=JSON.parse(t);if(o.databaseURL)return o;}catch(_){}
+  const o={};t.replace(/(\w+)\s*:\s*["']([^"']*)["']/g,(m,k,v)=>o[k]=v);
+  return o.databaseURL?o:null;
+}
+/* ---------- Google Sheets (Apps Script Web App) ---------- */
+let SU=localStorage.getItem("arc-sheet")||"",sq=new Set(),stm=null;
+const compIdx=(ev,r)=>COMP.findIndex(c=>c[0]===ev&&c[1]===r);
+function rowOf(ev,i,r){
+  const q=state[ev][i];
+  return{key:"C"+compIdx(ev,r)+"-"+String(i).padStart(2,"0"),ev:EV[ev].label,dist:EV[ev].R[r],t:(i>>1)+1,pos:i&1?"B":"A",
+    name:q.name,univ:q.univ,grade:q.grade,gender:q.gender,arrows:q.sc[r].map(v=>v==null?"":v)};
+}
+function postRows(rows){
+  if(!SU||!rows.length)return;
+  fetch(SU,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify({rows})}).catch(()=>{});
+}
+function queueSheet(ch){
+  if(!SU)return;
+  for(const p in ch){
+    const m=p.match(/^(roster|scores)\/(\w+)\/s(\d+)(?:\/r(\d+))?/);if(!m)continue;
+    const ev=m[2],i=+m[3];
+    if(m[1]==="scores")sq.add(ev+"|"+i+"|"+m[4]);else EV[ev].R.forEach((_,r)=>sq.add(ev+"|"+i+"|"+r));
+  }
+  clearTimeout(stm);
+  stm=setTimeout(()=>{const rows=[...sq].map(s=>{const[a,b,c]=s.split("|");return rowOf(a,+b,+c);});sq.clear();postRows(rows);},1200);
+}
+function sendAll(){
+  const rows=[];
+  for(const ev in EV)state[ev].forEach((q,i)=>EV[ev].R.forEach((_,r)=>{if(q.name||q.sc[r].some(v=>v!=null))rows.push(rowOf(ev,i,r));}));
+  postRows(rows);
+}
+function link(view){
+  const c=localStorage.getItem(CK);if(!c&&!SU)return"";
+  return location.href.split("#")[0].split("?")[0]+(view?"?view=1":"")+"#c="+(c?encodeURIComponent(btoa(c)):"")+"&r="+encodeURIComponent(room)+"&s="+encodeURIComponent(SU);
+}
+(function(){
+  const h=new URLSearchParams(location.hash.slice(1));
+  if(h.get("c")||h.get("s")){try{if(h.get("c"))localStorage.setItem(CK,atob(h.get("c")));if(h.get("s"))localStorage.setItem("arc-sheet",h.get("s"));if(h.get("r"))localStorage.setItem(RK,h.get("r"));room=localStorage.getItem(RK)||room;SU=localStorage.getItem("arc-sheet")||"";}catch(_){}history.replaceState(null,"",location.pathname+location.search);}
+})();
+
+/* ---------- views ---------- */
+function vIn(){
+  const{ev,r}=cur(),q=state[ev][ui.i],a=q.sc[r];let body="",cum=0;
+  for(let e=0;e<6;e++){
+    const seg=a.slice(e*6,e*6+6),any=seg.some(v=>v!=null);
+    for(let h=0;h<2;h++){
+      const part=seg.slice(h*3,h*3+3),ay=part.some(v=>v!=null);cum+=sum(part);
+      body+=`<tr>${h?"":`<td class="en" rowspan="2">${e+1}</td>`}`+
+        part.map((v,c)=>{const k=e*6+h*3+c;return `<td class="ac ${v!=null?"s-"+v:""}${k===ui.k?" cur":""}" data-k="${k}">${v??""}</td>`;}).join("")+
+        `<td>${ay?sum(part):""}</td><td>${ay?cum:""}</td>`+
+        (h?"":`<td rowspan="2">${any?ten(seg):""}</td><td rowspan="2">${any?seg.filter(v=>v==="X").length:""}</td>`)+`</tr>`;
+    }
+  }
+  const has=a.some(v=>v!=null);
+  return `<div class="sel"><button data-act="prev">‹</button>
+    <button class="who" data-act="pick"><b>${EV[ev].label} ${pos(ui.i)}　${q.name?esc(q.name):"(未登録)"}</b><small>${esc(info(q))||"タップで選手を選ぶ"}</small></button>
+    <button data-act="nxt">›</button></div>
+    <div class="sh"><span>${EV[ev].label}　${EV[ev].R[r]}　36射</span><span>${has?"総計 "+sum(a):""}</span></div>
+    <table class="st"><colgroup><col style="width:26px"><col><col><col><col style="width:36px"><col style="width:42px"><col style="width:38px"><col style="width:30px"></colgroup>
+    <thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>小計</th><th>累計</th><th>10+X</th><th>X</th></tr></thead>
+    <tbody>${body}</tbody>
+    <tfoot><tr><td colspan="5" style="text-align:right;padding-right:8px">総計</td><td>${has?sum(a):""}</td><td>${has?ten(a):""}</td><td>${has?a.filter(v=>v==="X").length:""}</td></tr></tfoot></table>
+    <label class="mu" style="display:block;margin-top:8px"><input type="checkbox" data-act="auto" ${auto?"checked":""}> 3本そろったら高い順に並べ替える</label>`;
+}
+function vPad(){
+  return `<div class="keys">${KEYS.map(k=>`<button class="s-${k}" data-key="${k}">${k}</button>`).join("")}
+    <button class="w" data-act="back">⌫ 1つ戻す</button><button class="w" data-act="nextp">次の選手 ›</button></div>`;
+}
+function vPick(){
+  const{ev,r}=cur();
+  let h=`<div class="mh"><b>${EV[ev].label} 立ち位置</b><button data-act="closepick">閉じる</button></div><div class="mg">`;
+  for(let t=0;t<EV[ev].T;t++)h+=`<div class="tc"><b>${t+1}</b>`+[0,1].map(k=>{
+    const i=t*2+k,q=state[ev][i],n=q.sc[r].filter(v=>v!=null).length;
+    return `<button class="${i===ui.i?"sel2 ":""}${n===36?"done":n?"part":""}" data-i="${i}"><i>${k?"B":"A"}</i>${q.name?esc(q.name):"(未登録)"}</button>`;
+  }).join("")+`</div>`;
+  return h+"</div>";
+}
+function vBd(){
+  const{ev}=cur(),cmp=(a,b)=>b.t-a.t||b.h-a.h||b.x-a.x||b.t10-a.t10;
+  const rows=state[ev].map((q,i)=>({i,q,...stat(q)})).filter(o=>(o.q.name||o.n)&&(ui.g==="all"||o.q.gender===ui.g));
+  const sh=rows.filter(o=>o.n).sort(cmp),rk=new Map();
+  sh.forEach((o,k)=>{const p=sh[k-1];rk.set(o.i,p&&!cmp(p,o)?rk.get(p.i):k+1);});
+  const list=sh.concat(rows.filter(o=>!o.n));
+  const opt=(v,l)=>`<option value="${v}"${ui.g===v?" selected":""}>${l}</option>`;
+  return `<div class="card"><div class="row" style="margin:0"><b>${EV[ev].label}</b>
+    <select data-act="g" style="margin-left:auto">${opt("all","男女すべて")}${opt("男","男子")}${opt("女","女子")}</select>
+    <button data-act="csv">CSV</button></div>
+    <div class="mu" style="margin-top:6px">同点は ヒット数 → X → 10の数 の順。それでも同じなら同順位。</div></div>`+
+  list.map(o=>`<div class="card bc"><div class="rk">${rk.get(o.i)??"-"}</div>
+    <div class="bi"><b>${esc(o.q.name)||"(未登録)"}</b><span class="mu">${esc(info(o.q))} ${pos(o.i)}</span><br>
+    <span class="mu">${EV[ev].R.map((d,r)=>d+" "+sum(o.q.sc[r])).join(" / ")}　X ${o.x}　10 ${o.t10}　Hit ${o.h}</span></div>
+    <div class="bt">${o.n?o.t:""}<small>/${EV[ev].max}</small></div></div>`).join("");
+}
+function vRo(){
+  const{ev}=cur();
+  let h=`<div class="card"><b>${EV[ev].label} 立ち位置・名簿</b> <span class="mu">登録 ${state[ev].filter(q=>q.name).length}名</span></div>`;
+  for(let t=0;t<EV[ev].T;t++){
+    h+=`<div class="card"><div class="tn">的${t+1}</div>`;
+    for(let k=0;k<2;k++){
+      const i=t*2+k,q=state[ev][i];
+      h+=`<div class="rr"><span class="ab">${k?"B":"A"}</span>
+        <input class="f1" data-i="${i}" data-f="name" placeholder="選手氏名" value="${esc(q.name)}">
+        <input class="f2" data-i="${i}" data-f="univ" placeholder="大学名" value="${esc(q.univ)}">
+        <input class="f3" data-i="${i}" data-f="grade" placeholder="学年" inputmode="numeric" value="${esc(q.grade)}">
+        <select class="f4" data-i="${i}" data-f="gender"><option value=""></option><option${q.gender==="男"?" selected":""}>男</option><option${q.gender==="女"?" selected":""}>女</option></select></div>`;
+    }
+    h+="</div>";
+  }
+  return h;
+}
+function vSy(){
+  const c=localStorage.getItem(CK)||"";
+  return `<div class="card"><b>リアルタイム同期</b> <span class="mu">${$("#badge").textContent}</span>
+    <ol class="mu" style="font-size:13px">
+    <li>Firebaseコンソール(無料)でプロジェクトを作成</li>
+    <li>「Realtime Database」を作成(ルールは .read / .write を true に。大会後は削除推奨)</li>
+    <li>プロジェクト設定 → ウェブアプリを追加 → 表示される firebaseConfig を下に貼り付け</li>
+    <li>「接続」後、下のリンクを入力係・閲覧用に共有(設定入り)</li></ol>
+    <textarea id="cfg" placeholder='firebaseConfig を貼り付け'>${esc(c)}</textarea>
+    <div class="row"><input class="in" id="room" value="${esc(room)}" style="flex:1" placeholder="大会ID"><button class="on" data-act="connect">接続</button></div>
+    <div class="row"><button data-act="link">入力用リンクをコピー</button><button data-act="linkv">閲覧専用リンクをコピー</button><button data-act="disc">切断</button></div>
+    <div class="mu" style="margin-top:8px">複数端末で使うには、このHTMLをWeb上(GitHub Pages / Netlify など)に置いてください。</div></div>
+    <div class="card"><b>Googleスプレッドシートへ送信</b>
+      <div class="mu" style="margin:6px 0">Apps Script のウェブアプリURLを貼り付けます。入力すると数秒でシートに反映されます。</div>
+      <input class="in" id="su" value="${esc(SU)}" placeholder="https://script.google.com/macros/s/.../exec">
+      <div class="row"><button class="on" data-act="sheetsave">保存</button><button data-act="sendall">全データを今すぐ送信</button></div></div>
+    <div class="card"><button data-act="reset" style="color:#d33">全データ消去</button></div>`;
+}
+
+function render(){
+  document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("on",b.dataset.tab===ui.tab));
+  $("#tabs").style.display=VIEW?"none":"";
+  $("#comp").style.display=ui.tab==="sync"?"none":"";
+  $("#comp").innerHTML=COMP.map((c,i)=>`<button data-c="${i}" class="${i===ui.c?"on":""}">${c[2]}</button>`).join("");
+  $("#v").innerHTML=({input:vIn,board:vBd,roster:vRo,sync:vSy})[ui.tab]();
+  document.body.classList.toggle("hp",ui.tab==="input");
+  $("#pad").innerHTML=ui.tab==="input"?vPad():"";
+  $("#pick").className=ui.pick?"on":"";$("#pick").innerHTML=ui.pick?vPick():"";
+  badge();
+  if(ui.tab==="input"&&!ui.pick){const c=document.querySelector(".ac.cur");if(c)c.scrollIntoView({block:"nearest"});}
+}
+function move(d){
+  const L=state[cur().ev];let j=ui.i;
+  for(let n=0;n<L.length;n++){j=(j+d+L.length)%L.length;if(L[j].name)break;}
+  ui.i=j;ui.k=firstEmpty();
+}
+function setArrow(key){
+  const{ev,r}=cur(),a=state[ev][ui.i].sc[r],k=ui.k,ch={};
+  a[k]=key;ch[sp(ev,ui.i,r,k)]=key;
+  if(auto){
+    const s=Math.floor(k/3)*3,seg=a.slice(s,s+3);
+    if(seg.every(v=>v!=null)){seg.sort((x,y)=>rank(y)-rank(x));seg.forEach((v,j)=>{a[s+j]=v;ch[sp(ev,ui.i,r,s+j)]=v;});}
+  }
+  const nx=a.findIndex((v,j)=>v==null&&j>k);ui.k=nx>=0?nx:Math.min(k+1,35);
+  push(ch);
+}
+function dl(n,t){const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:"text/csv"}));a.download=n;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
+async function copy(t){try{await navigator.clipboard.writeText(t);alert("コピーしました");}catch(_){prompt("コピーしてください",t);}}
+
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-tab],[data-c],button[data-i],td[data-k],[data-key],button[data-act]");if(!t)return;
+  const d=t.dataset,{ev,r}=cur();
+  if(d.tab)ui.tab=d.tab;
+  else if(d.c!=null){ui.c=+d.c;ui.i=Math.min(ui.i,state[cur().ev].length-1);ui.k=firstEmpty();}
+  else if(t.matches("button[data-i]")){ui.i=+d.i;ui.k=firstEmpty();ui.pick=false;}
+  else if(d.k!=null)ui.k=+d.k;
+  else if(d.key)setArrow(d.key);
+  else switch(d.act){
+    case"back":{const a=state[ev][ui.i].sc[r];if(a[ui.k]==null&&ui.k>0)ui.k--;a[ui.k]=null;push({[sp(ev,ui.i,r,ui.k)]:null});break;}
+    case"nextp":case"nxt":move(1);break;
+    case"prev":move(-1);break;
+    case"pick":ui.pick=true;break;
+    case"closepick":ui.pick=false;break;
+    case"auto":return;
+    case"g":return;
+    case"csv":{
+      const L=[["順位","立ち位置","氏名","大学名","学年","性別",...EV[ev].R,"総計","ヒット","X","10"]];
+      state[ev].forEach((q,i)=>{const s=stat(q);if(q.name||s.n)L.push(["",pos(i),q.name,q.univ,q.grade,q.gender,...EV[ev].R.map((_,k)=>sum(q.sc[k])),s.t,s.h,s.x,s.t10]);});
+      dl(`archery-${ev}.csv`,"\ufeff"+L.map(x=>x.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(",")).join("\r\n"));return;}
+    case"connect":{
+      const c=parseCfg($("#cfg").value);if(!c){alert("databaseURL を含む firebaseConfig を貼り付けてください");return;}
+      localStorage.setItem(CK,JSON.stringify(c));localStorage.setItem(RK,($("#room").value.trim()||"kanto-2026-autumn").replace(/[.#$\[\]\/]/g,"-"));location.reload();return;}
+    case"sheetsave":SU=$("#su").value.trim();localStorage.setItem("arc-sheet",SU);alert("保存しました");return;
+    case"sendall":sendAll();alert("送信しました。数秒後にシートをご確認ください");return;
+    case"disc":localStorage.removeItem(CK);location.reload();return;
+    case"link":copy(link(false));return;
+    case"linkv":copy(link(true));return;
+    case"reset":if(confirm("全員のスコアと名簿を消去します(同期中は共有データも消えます)。よろしいですか?")){if(live)ref().remove();state=init();save();}break;
+  }
+  render();
+});
+document.addEventListener("change",e=>{
+  const t=e.target,d=t.dataset;
+  if(d.act==="auto"){auto=t.checked;localStorage.setItem(AK,auto?"1":"0");return;}
+  if(d.act==="g"){ui.g=t.value;render();return;}
+  if(d.f){const{ev}=cur();state[ev][+d.i][d.f]=t.value;push({[rp(ev,+d.i,d.f)]:t.value||null});}
+});
+
+render();
+connect();
+</script>
+</body>
+</html>
