@@ -175,6 +175,20 @@ function sendAll(){
   for(const ev in EV)state[ev].forEach((q,i)=>EV[ev].R.forEach((_,r)=>{if(q.name||q.sc[r].some(v=>v!=null))rows.push(rowOf(ev,i,r));}));
   postRows(rows);
 }
+async function pullSheet(quiet){
+  if(!SU)return;
+  try{
+    const j=await(await fetch(SU+(SU.includes("?")?"&":"?")+"pull=1")).json();
+    (j.rows||[]).forEach(o=>{
+      const m=/^C(\d+)-(\d+)$/.exec(o.key);if(!m)return;
+      const c=COMP[+m[1]];if(!c)return;
+      const ev=c[0],r=c[1],q=state[ev]&&state[ev][+m[2]];if(!q)return;
+      if(o.name){q.name=o.name;q.univ=o.univ||"";q.grade=o.grade||"";q.gender=o.gender||"";}
+      q.sc[r]=o.arrows.map((v,k)=>v!==""?v:q.sc[r][k]);
+    });
+    save();render();if(!quiet)alert("シートから読み込みました");
+  }catch(e){if(!quiet)alert("読み込み失敗: "+e.message);}
+}
 function link(view){
   const c=localStorage.getItem(CK);if(!c&&!SU)return"";
   return location.href.split("#")[0].split("?")[0]+(view?"?view=1":"")+"#c="+(c?encodeURIComponent(btoa(c)):"")+"&r="+encodeURIComponent(room)+"&s="+encodeURIComponent(SU);
@@ -269,7 +283,7 @@ function vSy(){
     <div class="card"><b>Googleスプレッドシートへ送信</b>
       <div class="mu" style="margin:6px 0">Apps Script のウェブアプリURLを貼り付けます。入力すると数秒でシートに反映されます。</div>
       <input class="in" id="su" value="${esc(SU)}" placeholder="https://script.google.com/macros/s/.../exec">
-      <div class="row"><button class="on" data-act="sheetsave">保存</button><button data-act="sheettest">接続テスト</button><button data-act="sendall">全データを今すぐ送信</button></div></div>
+      <div class="row"><button class="on" data-act="sheetsave">保存</button><button data-act="sheettest">接続テスト</button><button data-act="pull">シートから読み込む</button><button data-act="sendall">全データを今すぐ送信</button></div></div>
     <div class="card"><button data-act="reset" style="color:#d33">全データ消去</button></div>`;
 }
 
@@ -334,6 +348,7 @@ document.addEventListener("click",e=>{
       try{const p=await fetch(SU,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({rows:[]})});m+="POST: "+(await p.text()).slice(0,200);}catch(e){m+="POST失敗: "+e.message;}
       alert(m);
     })();return;
+    case"pull":pullSheet(false);return;
     case"sendall":sendAll();alert("送信しました。数秒後にシートをご確認ください");return;
     case"disc":localStorage.removeItem(CK);location.reload();return;
     case"link":copy(link(false));return;
@@ -351,6 +366,7 @@ document.addEventListener("change",e=>{
 
 render();
 connect();
+if(SU)pullSheet(true);
 </script>
 </body>
 </html>
