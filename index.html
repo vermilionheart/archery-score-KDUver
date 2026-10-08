@@ -269,7 +269,7 @@ function vSy(){
     <div class="card"><b>Googleスプレッドシートへ送信</b>
       <div class="mu" style="margin:6px 0">Apps Script のウェブアプリURLを貼り付けます。入力すると数秒でシートに反映されます。</div>
       <input class="in" id="su" value="${esc(SU)}" placeholder="https://script.google.com/macros/s/.../exec">
-      <div class="row"><button class="on" data-act="sheetsave">保存</button><button data-act="sendall">全データを今すぐ送信</button></div></div>
+      <div class="row"><button class="on" data-act="sheetsave">保存</button><button data-act="sheettest">接続テスト</button><button data-act="sendall">全データを今すぐ送信</button></div></div>
     <div class="card"><button data-act="reset" style="color:#d33">全データ消去</button></div>`;
 }
 
@@ -327,6 +327,13 @@ document.addEventListener("click",e=>{
       const c=parseCfg($("#cfg").value);if(!c){alert("databaseURL を含む firebaseConfig を貼り付けてください");return;}
       localStorage.setItem(CK,JSON.stringify(c));localStorage.setItem(RK,($("#room").value.trim()||"kanto-2026-autumn").replace(/[.#$\[\]\/]/g,"-"));location.reload();return;}
     case"sheetsave":SU=$("#su").value.trim();localStorage.setItem("arc-sheet",SU);alert("保存しました");return;
+    case"sheettest":(async()=>{
+      if(!SU){alert("先にURLを保存してください");return;}
+      let m="";
+      try{const g=await fetch(SU);m+="GET: "+(await g.text()).slice(0,80)+"\n";}catch(e){m+="GET失敗: "+e.message+"\n";}
+      try{const p=await fetch(SU,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({rows:[]})});m+="POST: "+(await p.text()).slice(0,200);}catch(e){m+="POST失敗: "+e.message;}
+      alert(m);
+    })();return;
     case"sendall":sendAll();alert("送信しました。数秒後にシートをご確認ください");return;
     case"disc":localStorage.removeItem(CK);location.reload();return;
     case"link":copy(link(false));return;
